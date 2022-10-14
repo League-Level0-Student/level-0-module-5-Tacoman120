@@ -5,22 +5,45 @@ import javax.swing.JOptionPane;
 import org.jointheleague.graphical.robot.Robot;
 
 public class obedient_robot {
+	static Robot potato;
 	
 	public static void main(String[] args) {
-		
-		String bob = JOptionPane.showInputDialog(null, "What shape do you want the robot to draw?"
-				+ " Chose from square, circle, and triangle"
+		potato = new Robot();
+		potato.show();
+		String bob = JOptionPane.showInputDialog(null, "What shape do you want the robot to draw?\n"
+				+ " Chose from square, circle, and triangle\n"
 				+ " (please input you answer in the the same way it is typed in the options).");
 		String e = JOptionPane.showInputDialog(null, "What color do you want the robot to draw?\n"
-				+ "	 Chose from square, circle, and triangle\n"
+				+ "	 Chose from red, blue, and yellow\n"
 				+ " (please input you answer in the the same way it is typed in the options).");
 		if(bob.equals("square")) {
+			if(e.equals("red")) {
+				potato.setPenColor(255, 0, 0);
+			}else if (e.equals("blue")) {
+				potato.setPenColor(0, 0, 255);
+			}else if (e.equals("yellow")) {
+				potato.setPenColor(255, 255, 0);
+			}
 			drawSquare();
 		}
-		if(bob.equals("circle")&&(e.equals("red"))) {
+		if(bob.equals("circle")) {
+			if(e.equals("red")) {
+				potato.setPenColor(255, 0, 0);
+			}else if (e.equals("blue")) {
+				potato.setPenColor(0, 0, 255);
+			}else if (e.equals("yellow")) {
+				potato.setPenColor(255, 255, 0);
+			}
 			drawCircle();
 		}
 		if(bob.equals("triangle")) {
+			if(e.equals("red")) {
+				potato.setPenColor(255, 0, 0);
+			}else if (e.equals("blue")) {
+				potato.setPenColor(0, 0, 255);
+			}else if (e.equals("yellow")) {
+				potato.setPenColor(255, 255, 0);
+			}
 			drawTriangle();
 		}
 
@@ -28,8 +51,8 @@ public class obedient_robot {
 		
 		
 	}
-static void drawSquare(){
-Robot potato = new Robot();
+public static void drawSquare(){
+
 potato.show();
 potato.penDown();
 potato.setSpeed(20);
@@ -38,8 +61,7 @@ potato.setSpeed(20);
 			potato.turn(90);
 		}
 	}
-static void drawTriangle() {
-	Robot potato = new Robot();
+public static void drawTriangle() {
 	potato.show();
 	potato.penDown();
 	potato.setSpeed(20);
@@ -49,8 +71,7 @@ static void drawTriangle() {
 		potato.turn(120);
 		}
 	}
-static void drawCircle() {
-	Robot potato = new Robot();
+public static void drawCircle() {
 	potato.show();
 	potato.penDown();
 	potato.setSpeed(1000);
