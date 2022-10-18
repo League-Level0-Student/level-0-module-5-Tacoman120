@@ -22,10 +22,33 @@ public class HappyPet {
  if(task==0) {
 	 giveYourPetWater();
  }
+ if(task==1) {
+	 cuddleWithYourPet();
+ }
+ if(task==2) {
+	 feedYourPet();
+ }
+ if(task==3) {
+	 takeAWalkWithYourPet();
+ }
+ if(task==4) {
+	 groomYourPet();
+ }
+ if(task==5) {
+	 cleanUpYourPetsPoop();
+ }
+ if(task==6) {
+	 killYourPet();
+ }
+ if(happinessLevel<100) {
+ JOptionPane.showMessageDialog(null, "Your "+bob+" is "+happinessLevel+"% statisfied with your efforts");
+ }
 			// 7. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
 		}
+		
 		JOptionPane.showMessageDialog(null, "you really love your pet");
+		
 	}
 
 	// 5. Create methods to handle each of your user selections.
@@ -50,6 +73,10 @@ public class HappyPet {
 	public static void groomYourPet() {
 		JOptionPane.showMessageDialog(null, "Your "+bob+" smiles happily");
 		happinessLevel+=15;
+	}
+	public static void cleanUpYourPetsPoop() {
+		JOptionPane.showMessageDialog(null, "Your "+bob+" stares at you with a smug look on his face");
+		happinessLevel+=5;
 	}
 	public static void killYourPet() {
 		JOptionPane.showMessageDialog(null, "Your "+bob+" smiles happily as the last of his life slips away");
