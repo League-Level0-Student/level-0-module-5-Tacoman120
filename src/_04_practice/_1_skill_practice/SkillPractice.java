@@ -82,12 +82,16 @@ for(int i = 0; i<30; i+=3) {
 		}
 
 		void skill4() { // In a pop-up, ask the user for the city they live in 
-
+			String bob = JOptionPane.showInputDialog(null, "What city do you live in.");
 
 
 		// If they answered "San Diego", tell them they live in America's Finest City 
 
-
+			if(bob.equals("San Diego")) {
+				JOptionPane.showMessageDialog(null, "You live in America's finest city");
+			}else {
+				JOptionPane.showMessageDialog(null, "Move to San Diego.");
+			}
 
 		// Otherwise, tell them to move to San Diego 
 
@@ -95,14 +99,15 @@ for(int i = 0; i<30; i+=3) {
 
 		// Create a variable - cars - and initialize it to the number of cars your family has. // If there are 0 cars, use a pop-up to display, "I bet you use public transportation." 
 
-
+			int car = 3;
+			
 
 		// If there is 1 car, use a pop-up to display the make/model of the car 
-
+			int weel = (car*4);
 
 
 		// If there is more than 1 car, use a pop-up to display how many wheels the // cars have between them. 
-
+			JOptionPane.showMessageDialog(null, "The cars have "+weel+"s between them.");
 
 
 		}
